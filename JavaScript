@@ -1,7 +1,7 @@
-// Strict Mode
+// *Strict Mode
 "use strict";
 
-// Variables
+// *Variables
 // | Feature       | var                   | let                       | const                     |
 // |---------------|-----------------------|---------------------------|---------------------------|
 // | Scope         | Function - Global     | Block                     | Block                     |
@@ -9,3 +9,26 @@
 // | Reassignment  | Yes                   | Yes                       | No                        |
 // | Redeclaration | Yes                   | No                        | No                        |
 // | Modern Usage  | Avoid - Legacy        | Use For Mutable Vars      | Use For Constants         |
+
+// *Data Types
+// Number
+// + Integer | Float | Infinity | -Infinity | NaN
+// + NaN ** 0 = 1
+//
+// BigInt
+// String
+// Boolean
+//
+// null
+// + Unknown | Nothing | Empty
+//
+// undefined
+// + Declared But Not Assigned
+//
+// object
+// symbol
+
+// *Interaction
+// alert
+// prompt
+// confirm
