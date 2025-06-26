@@ -29,9 +29,9 @@
 // symbol
 
 // *Interaction
-// alert
-// prompt
-// confirm
+alert()
+prompt()
+confirm()
 
 // *Basic Operators
 // Operand: The Value Or Variable That An Operator Is Applied To
@@ -57,3 +57,88 @@
 // LEFT SHIFT <<
 // RIGHT SHIFT >>
 // ZERO-FILL RIGHT SHIFT >>>
+
+// *Comparisons
+// null === undefined - False
+// null == undefined - True
+// null: 0 - Numeric Conversion
+// undefined: NaN - Numeric Conversion
+//
+// null > 0 - False
+// null == 0 - False
+// null >= 0 - True
+//
+// undefined > 0 - False
+// undefined < 0 - False
+// undefined == 0 - False
+
+// *Conditional Statement
+// if (condition) {
+//   A
+// } else {
+//   B
+// }
+//
+// if (condition) {
+//   A
+// } else if (condition) {
+//   B
+// } else {
+//   C
+// }
+//
+// condition ? A : B
+//
+// condition ? A :
+// condition ? B :
+// C
+
+// *Logical Operators
+// || - OR
+// && - AND
+// ! - NOT
+
+// *Nullish Coalescing Operator
+// || - The First Truthy Value
+// ?? - The First Defined Value
+
+// *Loops
+// while (condition) {
+//   A
+// }
+//
+// do {
+//   A
+// } while (condition)
+//
+// for (begin; condition; step) {
+//   A
+// }
+
+// *switch Statement
+// switch(x) {
+//   case A:
+//     X
+//   case B:
+//     Y
+//   case C:
+//     Z
+//   default:
+//     W
+// }
+
+// *Functions
+// - Function Declaration
+// function name(param) {
+//   A
+// }
+//
+// - Function Expression
+// let name = function(param) {
+//   A
+// }
+//
+// - Arrow Function
+// let name = (arg) => {
+//   A
+// }
