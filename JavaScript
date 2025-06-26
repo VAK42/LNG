@@ -32,3 +32,28 @@
 // alert
 // prompt
 // confirm
+
+// *Basic Operators
+// Operand: The Value Or Variable That An Operator Is Applied To
+// Unary: A Single Operand
+// Binary: Two Operands
+
+// *Maths
+// Addition +
+// Subtraction -
+// Multiplication *
+// Division /
+// Remainder %
+// Exponentiation **
+
+// String Concatenation (+)
+// Numeric Conversion (+)
+
+// *Bitwise Operators
+// AND &
+// OR |
+// XOR ^
+// NOT ~
+// LEFT SHIFT <<
+// RIGHT SHIFT >>
+// ZERO-FILL RIGHT SHIFT >>>
