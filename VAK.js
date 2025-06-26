@@ -146,3 +146,48 @@ let Name = function (param) {
 let NAME = (arg) => {
   console.log(arg);    // Arrow Function
 };
+
+// Objects
+let K = new Object();  // Object Constructor
+let P = "P";
+
+// Object Literal
+let L = {
+  M: "MO",
+  N: "NO",
+  [P]: "PO"  // Computed Property
+};
+
+console.log(L.M);       // MO
+console.log(L.N);       // NO
+L.O = true;             // Add Property
+delete L.O;             // Remove Property
+L["M N"] = 0;           // Add Multiword Property
+console.log(L["M N"]);  // 0
+delete L["M N"];        // Remove Multiword Property
+
+// OBJ
+function Q(A, B) {
+  return {
+    A: A,
+    B: B
+  };
+}
+
+let R = Q("VAK", 42);
+console.log(R.A);     // VAK
+console.log(B in R);  // True
+
+// Loop
+for (let k in L) {
+  console.log(k);     // M - N
+  console.log(L[k]);  // MO - NO
+}
+
+// Comparison
+let S = {};
+let T = {};
+let U = S;
+console.log(S == U);   // True
+console.log(S === U);  // True
+console.log(S == T);   // False
