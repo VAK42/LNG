@@ -191,3 +191,21 @@ let U = S;
 console.log(S == U);   // True
 console.log(S === U);  // True
 console.log(S == T);   // False
+
+// Merging
+let V = { VP: "VO" };
+let W = { WP: "WO" };
+let X = { XP: "XO" };
+Object.assign(V, W, X);
+console.log(V.VP);  // VO
+console.log(V.WP);  // WO
+console.log(V.XP);  // XO
+let Y = Object.assign({}, V);
+console.log(Y.VP);  // VO
+console.log(Y.WP);  // WO
+console.log(Y.XP);  // XO
+Object.assign(V, { VP: "VOV" });
+console.log(V.VP);  // VOV
+let Z = structuredClone(V);
+console.log(V.VP === Y.VP);  // True
+console.log(V.VP === Z.VP);  // False
