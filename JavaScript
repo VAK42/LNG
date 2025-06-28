@@ -150,50 +150,51 @@ let NAME = (arg) => {
 // Objects
 let K = new Object();  // Object Constructor
 let P = "P";
-
-// Object Literal
-let L = {
+let L = {              // Object Literal
   M: "MO",
   N: "NO",
-  [P]: "PO"  // Computed Property
+  [P]: "PO",           // Computed Property
+  AA: function () {
+    console.log(this.M);
+  },
+  AB() {
+    console.log(this.N);
+  }
 };
 
 console.log(L.M);       // MO
 console.log(L.N);       // NO
+L.AA();                 // MO
+L.AB();                 // NO
 L.O = true;             // Add Property
 delete L.O;             // Remove Property
 L["M N"] = 0;           // Add Multiword Property
 console.log(L["M N"]);  // 0
 delete L["M N"];        // Remove Multiword Property
 
-// OBJ
 function Q(A, B) {
   return {
     A: A,
     B: B
   };
 }
-
 let R = Q("VAK", 42);
 console.log(R.A);     // VAK
 console.log(B in R);  // True
 
-// Loop
-for (let k in L) {
+for (let k in L) {    // Loop
   console.log(k);     // M - N
   console.log(L[k]);  // MO - NO
 }
 
-// Comparison
-let S = {};
+let S = {};            // Comparison
 let T = {};
 let U = S;
 console.log(S == U);   // True
 console.log(S === U);  // True
 console.log(S == T);   // False
 
-// Merging
-let V = { VP: "VO" };
+let V = { VP: "VO" };  // Merging
 let W = { WP: "WO" };
 let X = { XP: "XO" };
 Object.assign(V, W, X);
@@ -209,3 +210,20 @@ console.log(V.VP);  // VOV
 let Z = structuredClone(V);
 console.log(V.VP === Y.VP);  // True
 console.log(V.VP === Z.VP);  // False
+
+function AC(AD) {
+  // this = {};
+  this.AD = AD;
+  this.AE = true;
+  this.AF = function () {
+    console.log(this.AD);
+  };
+  // return this;
+}
+let AG = new AC("AD");
+console.log(AG.AD);  // AD
+console.log(AG.AE);  // True
+
+AC?.AE  // Optional Chaining
+AC?.[k]
+AC.AF?.()
