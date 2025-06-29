@@ -98,8 +98,8 @@ console.log(!true);          // NOT
 // Nullish Coalescing Operator
 let H = null;
 let I = undefined;
-console.log(H || "Nullish");     // First Truthy
-console.log(I ?? "Coalescing");  // First Defined
+console.log(H || "Nullish");     // 1st Truthy - Nullish
+console.log(I ?? "Coalescing");  // 1st Defined - Coalescing
 
 // Loops
 i = 0;
@@ -179,8 +179,8 @@ function Q(A, B) {
   };
 }
 let R = Q("VAK", 42);
-console.log(R.A);     // VAK
-console.log(B in R);  // True
+console.log(R.A);       // VAK
+console.log("B" in R);  // True
 
 for (let k in L) {    // Loop
   console.log(k);     // M - N
@@ -190,7 +190,6 @@ for (let k in L) {    // Loop
 let S = {};            // Comparison
 let T = {};
 let U = S;
-console.log(S == U);   // True
 console.log(S === U);  // True
 console.log(S == T);   // False
 
@@ -208,10 +207,10 @@ console.log(Y.XP);  // XO
 Object.assign(V, { VP: "VOV" });
 console.log(V.VP);  // VOV
 let Z = structuredClone(V);
-console.log(V.VP === Y.VP);  // True
-console.log(V.VP === Z.VP);  // False
+console.log(V.VP === Y.VP);  // False
+console.log(V.VP === Z.VP);  // True
 
-function AC(AD) {
+function AC(AD) {  // Constructor
   // this = {};
   this.AD = AD;
   this.AE = true;
@@ -225,5 +224,40 @@ console.log(AG.AD);  // AD
 console.log(AG.AE);  // True
 
 AC?.AE  // Optional Chaining
-AC?.[k]
-AC.AF?.()
+
+let AH = Symbol("id");           // Symbol
+let AI = Symbol("id");
+console.log(AH == AI);           // False
+console.log(AH);                 // Symbol(id)
+console.log(AH.toString());      // Symbol(id)
+console.log(AH.description);     // id
+let AJ = Symbol.for("id");
+let AK = Symbol.for("id");
+console.log(AJ === AK);          // True
+console.log(Symbol.keyFor(AJ));  // id
+console.log(Symbol.keyFor(AH));  // Undefined
+let AL = {
+  AM: "AM",
+  AN: 1000,
+  [Symbol.toPrimitive](h) {
+    return h == "string" ? this.AM : this.AN;
+  },
+  toString() {
+    return this.AM;
+  },
+  valueOf() {
+    return this.AN;
+  }
+};
+console.log(+AL);       // Hint: number - valueOf -> 1000
+console.log(AL + 500);  // Hint: default - valueOf -> 1500
+console.log(AL);        // Hint: string - toString
+/*
+{
+  AM: 'AM',
+  AN: 1000,
+  toString: [Function: toString],
+  valueOf: [Function: valueOf],
+  [Symbol(Symbol.toPrimitive)]: [Function: [Symbol.toPrimitive]]
+}
+*/
